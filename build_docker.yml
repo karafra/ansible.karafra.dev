@@ -14,3 +14,7 @@
         build:
           path: '/tmp/ansible/{{ projectName }}'
         tag: latest
+    - name: Cleanup
+      ansible.builtin.file:
+        state: absent
+        path: '/tmp/ansible/{{ projectName }}'
