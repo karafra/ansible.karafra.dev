@@ -1,0 +1,14 @@
+---
+- hosts: 127.0.0.1
+  connection: local
+  become: true
+  tasks:
+    - name: Run container
+      docker_container:
+        name: '{{ repository }}'
+        state: started
+        image: '{{ projectName }}:latest'
+        exposed_ports:
+          - '4200'
+        ports:
+          - '4200:4200'
