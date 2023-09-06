@@ -13,5 +13,4 @@
         source: build
         build:
           path: '/tmp/ansible/{{ projectName }}'
-        force: true
         tag: latest
