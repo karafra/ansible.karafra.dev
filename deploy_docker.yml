@@ -5,7 +5,7 @@
   tasks:
     - name: Run container
       docker_container:
-        name: '{{ repository }}'
+        name: '{{ projectName }}'
         state: started
         image: '{{ projectName }}:latest'
         exposed_ports:
