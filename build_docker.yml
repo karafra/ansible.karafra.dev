@@ -9,6 +9,9 @@
         dest: '/tmp/ansible/{{ projectName }}'
     - name: Build docker image
       docker_image:
-        path: '/tmp/ansible/{{ projectName }}'
         name: '{{ projectName }}'
+        source: build
+        build:
+          path: '/tmp/ansible/{{ projectName }}'
+        force: true
         tag: latest
