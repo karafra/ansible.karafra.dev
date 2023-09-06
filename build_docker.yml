@@ -5,5 +5,5 @@
   tasks:
     - name: Checkout project repository
       ansible.builtin.git:
-        repo: {{repository}}
-        dest: /tmp/ansible/{{projectName}}
+        repo: {{ repository }}
+        dest: /tmp/ansible/{{ projectName }}
